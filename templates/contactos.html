@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'contactos.css')}}">
+    <title>Document</title>
+</head>
+<body>
+  
+    
+    <div class="form-container">
+        <h1 id="titulo">Contactanos</h1>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul style="color: red;">
+            {%for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    <form action="https://formspree.io/f/mgvenlve"  method="post">
+    <input type="text" name="nombre" placeholder="nombre" required>
+    <br>
+
+    <input type="email" name="Gmail" placeholder="Gmail" required>
+    <br>
+
+    
+    <input type="date" name="fecha" required>
+    <br>
+
+    <textarea name="descrip"  placeholder="describa"></textarea >
+    <br>
+    <button type="submit" >Enviar</button>
+
+
+    </form>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/acerca">Acerca de</a></li>
+            <a href="{{ url_for('ver_carrito') }}">Ver Carrito</a>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

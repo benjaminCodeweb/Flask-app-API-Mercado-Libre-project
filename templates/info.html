@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'info.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h1>su formulario ha sido enviado correctamente!</h1>
+    <p>sus datos son: </p>
+    <br>
+    <p class="data-item"> <strong>nombre:</strong> {{nombre}}</p>
+    <p class="data-item"><strong>fecha:</strong>    {{fecha}}</p>
+    <p class="data-item"><strong>descrip: </strong>  {{descrip}}  </p>
+    <p class="data-item"> <strong>Gmail: </strong>  {{gmail}}              </p>
+</div>
+<div nav class="nav-bar">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/acerca">Acerca de</a></li>
+            <a href="{{ url_for('ver_carrito') }}">Ver Carrito</a>
+        </ul>
+    </nav>
+</body>
+</html>

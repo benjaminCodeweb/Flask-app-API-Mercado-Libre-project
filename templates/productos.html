@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'style.css')}}">
+    <title>busquedas de {{nombre}}</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/acerca">Acerca de</a></li>
+            <li><a href="/ver_carrito">Ver Carrito</a></li>
+        </ul>
+    </nav>
+    <p>busquedas de {{nombre}}</p>
+    {% if precio and imagen %}
+    <div class="product-card">
+        <div class="product-image">
+    <img src="{{ imagen }}" alt="Imagen de {{ nombre }}" width="200">
+    </div>
+    <div class="product-details"></div>
+    <p class="product-name" id="detallenombre">{{ nombre }}</p>
+    <p id="detalle"><strong>Precio:</strong> ${{ precio }}</p>
+    
+   
+
+    
+
+    
+  
+    <form action="{{ url_for('agregar_al_carrito') }}" method="POST">
+        <!-- Campos ocultos para enviar los detalles del producto -->
+        <input type="hidden" name="nombre" value="{{ nombre }}">
+        <input type="hidden" name="precio" value="{{ precio }}">
+        <input type="hidden" name="imagen" value="{{ imagen }}">
+        
+        <!-- Botón para agregar al carrito -->
+        <button type="submit">Agregar al carrito</button>
+    </form>
+   </div>
+    </div>
+{% else %}
+    <p>No se encontraron detalles del producto.</p>
+{% endif %}
+
+</body>
+</html>

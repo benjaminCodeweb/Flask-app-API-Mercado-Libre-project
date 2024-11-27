@@ -1,0 +1,179 @@
+/* Fondo de la página */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Título */
+.form-container h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.form-container h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #00b894;
+    margin: 0.5rem auto 0;
+}
+#titulo {
+    color: #ffff;
+}
+
+/* Campos del formulario */
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container textarea {
+    width: 90%;
+    padding: 0.7rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #5a5858;
+    color: #ffff;
+    font-size: 1rem;
+}
+
+.form-container input::placeholder {
+    color: #ffff;
+}
+
+.form-container textarea::placeholder {
+    color: #ffff;
+}
+/* Botones */
+.form-container button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #47aa05;
+    font-weight: bolder;
+    color: #ffff;
+}
+
+/* Botón de Registro */
+.form-container .register-btn {
+    background-color: #00b894;
+    color: #fff;
+}
+
+.form-container .register-btn:hover {
+    background-color: #009874;
+}
+
+/* Botón de Login */
+.form-container .login-btn {
+    background-color: #fff;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+.form-container .login-btn:hover {
+    background-color: #ddd;
+}
+
+/* Link de contraseña */
+.form-container .forgot-password {
+    display: block;
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.form-container .forgot-password a {
+    color: #00b894;
+    text-decoration: none;
+}
+
+.form-container .forgot-password a:hover {
+    text-decoration: underline;
+}
+
+
+.nav-bar {
+    background-color: #444;
+    color: whitesmoke;
+    padding: 1rem;
+    width: 100%;
+    text-align: left; /* Alinea el contenido a la izquierda */
+}
+
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start; /* Alinea los enlaces a la izquierda */
+}
+
+.nav-bar ul li {
+    display: inline;
+}
+
+.nav-bar ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.nav-bar ul li a:hover {
+    text-decoration: underline;
+}
+.nav-bar {
+    background-color: #444;
+    color: whitesmoke;
+    padding: 1rem;
+    width: 100%;
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    text-align: left;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+.nav-bar ul li {
+    display: inline;
+}
+
+.nav-bar ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.nav-bar ul li a:hover {
+    text-decoration: underline;
+}
